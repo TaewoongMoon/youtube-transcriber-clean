@@ -1,0 +1,6 @@
+flask
+openai
+yt-dlp
+gspread
+google-auth
+isodate
