@@ -35,7 +35,7 @@ def fetch_all_video_links(channel_url):
                 video_id = item["id"]["videoId"]
                 video_url = f"https://www.youtube.com/watch?v={video_id}"
 
-                # 👉 쇼츠 필터링을 위해 videoDetails 요청
+                # 쇼츠 필터링을 위해 videoDetails 요청
                 video_api_url = (
                     f"https://www.googleapis.com/youtube/v3/videos?part=contentDetails"
                     f"&id={video_id}&key={YOUTUBE_API_KEY}"
