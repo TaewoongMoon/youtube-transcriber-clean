@@ -24,11 +24,11 @@ def run_batch_transcription():
     pending_channels = get_pending_channels()
 
     if not pending_channels:
-        print("📭 처리할 채널이 없습니다.")
+        print("처리할 채널이 없습니다.")
         return
 
     for item in pending_channels:
-        print(f"\n🔎 채널 처리 중: {item['channel_name']}")
+        print(f"\n 채널 처리 중: {item['channel_name']}")
 
         try:
             video_links = fetch_all_video_links(item["channel_link"])
@@ -46,7 +46,7 @@ def run_batch_transcription():
             mark_channel_done(item["row_number"])
 
         except Exception as e:
-            print(f"⚠️ 채널 처리 실패: {e}")
+            print(f"채널 처리 실패: {e}")
 
 # 실행
 if __name__ == "__main__":
