@@ -16,7 +16,7 @@ def download_audio_from_youtube(url):
         url
     ], capture_output=True, text=True)
 
-    print("📦 yt-dlp 출력:\n", result.stdout)
+    print("yt-dlp 출력:\n", result.stdout)
     if result.stderr:
         print("❗ 오류 로그:\n", result.stderr)
 
@@ -25,7 +25,7 @@ def download_audio_from_youtube(url):
             print("✅ 다운로드된 파일:", file)
             return file
 
-    raise FileNotFoundError("❌ mp3 파일이 생성되지 않았습니다.")
+    raise FileNotFoundError("mp3 파일이 생성되지 않았습니다.")
 
 # 최신 방식 Whisper API 호출
 def transcribe_audio(file_path):
@@ -57,6 +57,6 @@ if __name__ == "__main__":
     text = transcribe_youtube_video(test_url)
 
     if text:
-        print("\n📄 전사 결과:\n", text)
+        print("\n전사 결과:\n", text)
     else:
-        print("\n❌ 자막 추출에 실패했습니다.")
+        print("\n자막 추출에 실패했습니다.")
